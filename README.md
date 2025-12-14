@@ -1,4 +1,4 @@
-# simpleplaytimelimiter
+# Simpleplaytimelimiter
 
 a small paper plugin that enforces a daily playtime limit per player  
 built for paper 1.21.x and java 21
@@ -6,7 +6,7 @@ built for paper 1.21.x and java 21
 i originally wrote this for a parenting use case for my son so playtime stays healthy and predictable without constant discussions in the moment  
 the goal is simple behavior simple config and data you can read without special tools
 
-## features
+## Features
 
 - daily limit in minutes configurable via `dailyLimitMinutes` default is 120
 - warning messages when remaining minutes hit configured thresholds default is 15 5 1
@@ -18,19 +18,19 @@ the goal is simple behavior simple config and data you can read without special 
   - bossbar showing remaining minutes or infinity for unlimited players
   - actionbar message when a warning triggers
 
-## requirements
+## Requirements
 
 - paper 1.21.x
 - java 21
 
-## install
+## Install
 
 1. copy the jar into your server `plugins/` folder
 2. start the server once to generate config files
 3. edit `plugins/SimplePlaytimeLimiter/config.yml`
 4. run `/pt reload` or restart the server
 
-## build
+## Build
 
 ```bash
 gradlew clean build
@@ -40,7 +40,7 @@ the jar will be at:
 
 * `build/libs/SimplePlaytimeLimiter-<version>.jar`
 
-## configuration
+## Configuration
 
 file: `plugins/SimplePlaytimeLimiter/config.yml`
 
@@ -72,7 +72,7 @@ notes
 * bossbar shows `∞` for players with `spl.bypass` or whitelist access
 * color codes use `§` in messages and `&` is also supported for the bossbar title
 
-## data storage
+## Data Storage
 
 file: `plugins/SimplePlaytimeLimiter/players.yml`
 
@@ -80,7 +80,7 @@ file: `plugins/SimplePlaytimeLimiter/players.yml`
 * warning thresholds already sent are tracked per day as well
 * data is saved on player quit and also periodically via `saveIntervalSeconds`
 
-## commands
+## Commands
 
 all commands require `spl.admin`
 
@@ -113,7 +113,7 @@ all commands require `spl.admin`
 * `/pt reload`
   reloads config values into runtime state and restarts the ui ticker if needed
 
-## permissions
+## Permissions
 
 * `spl.admin`
   access to `/pt` commands
@@ -123,7 +123,7 @@ all commands require `spl.admin`
   excluded from limit enforcement and shown as unlimited in the ui
   default is false
 
-## how it works
+## How it works
 
 * on join a session baseline timestamp is stored per player
 * periodically the plugin flushes elapsed session minutes into the current day bucket
