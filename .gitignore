@@ -1,0 +1,20 @@
+# gradle
+.gradle/
+build/
+
+# compiled output
+bin/
+out/
+*.class
+
+# ide
+.vscode/
+.idea/
+*.iml
+
+# os
+.DS_Store
+Thumbs.db
+
+# logs
+*.log

@@ -1,0 +1,49 @@
+# daily limit in minutes for non whitelisted players
+dailyLimitMinutes: 120
+
+# timezone used for day boundaries and the midnight reset
+timezone: "Europe/Berlin"
+
+# warning thresholds in minutes remaining
+# each value is only sent once per day per player
+warnings: [15, 5, 1]
+
+# kick reason shown to the player when remaining time reaches zero
+kickMessage: "§cTageslimit erreicht. Morgen geht's weiter!"
+
+# message broadcast to all online players when someone hits the limit
+# {player} will be replaced with the player name
+broadcast: "§e{player} hat das Tageslimit erreicht."
+
+# players that are exempt from the limit
+# values must be uuid strings
+whitelist: []
+
+# how often the plugin flushes session time into players.yml and saves it
+saveIntervalSeconds: 60
+
+ui:
+  # enable or disable the bossbar entirely
+  bossbar: true
+
+  # show an actionbar message when a warning triggers
+  actionbarOnWarn: true
+
+  colors:
+    # bossbar is green when remaining minutes are above this value
+    greenAboveMinutes: 30
+
+    # bossbar is yellow when remaining minutes are above this value
+    # values at or below this threshold will show red
+    yellowAboveMinutes: 5
+
+  # bossbar title text
+  # {remaining} will be replaced with the remaining minutes or ∞ for unlimited players
+  title: "Spielzeit: {remaining} min"
+
+  # actionbar message used when a warning triggers
+  # {remaining} will be replaced with the remaining minutes
+  actionbar: "Noch {remaining} min"
+
+  # ui refresh interval in seconds for bossbar updates
+  updateIntervalSeconds: 5

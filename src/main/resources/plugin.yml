@@ -1,0 +1,24 @@
+name: SimplePlaytimeLimiter
+main: dev.chang.spl.SimplePlaytimeLimiter
+version: ${version}
+api-version: "1.21"
+
+commands:
+  pt:
+    description: Playtime tools
+    usage: |
+      /pt get <player|uuid>
+      /pt set <player|uuid> <min>
+      /pt limit <minutes>
+      /pt whitelist list
+      /pt whitelist add <player|uuid>
+      /pt whitelist remove <player|uuid>
+      /pt whitelist addme
+      /pt reload
+    permission: spl.admin
+
+permissions:
+  spl.admin:
+    default: op
+  spl.bypass:
+    default: false
