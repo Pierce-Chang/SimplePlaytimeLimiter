@@ -3,12 +3,12 @@ plugins {
 }
 
 group = "dev.chang"
-version = "1.21.8"
+version = "26.3"
 
 java {
-    // build with java 21 to match your paper 1.21.x runtime
+    // build with java 25 to match your paper 26.x runtime
     toolchain {
-        languageVersion.set(JavaLanguageVersion.of(21))
+        languageVersion.set(JavaLanguageVersion.of(25))
     }
 }
 
@@ -22,7 +22,7 @@ repositories {
 
 dependencies {
     // compile only because the server provides the paper api at runtime
-    compileOnly("io.papermc.paper:paper-api:1.21.8-R0.1-SNAPSHOT")
+    compileOnly("io.papermc.paper:paper-api:26.3.build.244-stable")
 }
 
 tasks.processResources {
